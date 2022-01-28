@@ -11,6 +11,14 @@ $text = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aute
 // controllo la lunghezza
 $textLen = strlen($text);
 
+// creo la variabile da censurare
+$censured = $_GET["censura"];
+
+// creo paragrafo con censure 
+$censuredText  = str_replace($censured, "***", $text);
+
+// stampo lungezza paragrafo censurato
+$censuredTextLen = strlen($censuredText);
 
 ?>
 
@@ -23,8 +31,15 @@ $textLen = strlen($text);
     <title>Badwords</title>
 </head>
 <body>
+    <!-- testo originale -->
     <h4><?php echo $text ?></h4>
     <h5>Lunghezza: <?php echo $textLen?></h5>
+
+    parola censurata: <?php echo $censured?>
+
+    <!-- testo censurato -->
+    <h4><?echo $censuredText?></h4>
+    <h5>Lunghezza: <?php echo $censuredTextLen?></h5>
 
 </body>
 </html>
