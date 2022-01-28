@@ -38,7 +38,7 @@ $censuredTextLen = strlen($censuredText);
     parola censurata: <?php echo $censured?>
 
     <!-- testo censurato -->
-    <h4><?echo $censuredText?></h4>
+    <h4><?php echo $censuredText?></h4>
     <h5>Lunghezza: <?php echo $censuredTextLen?></h5>
 
 </body>
